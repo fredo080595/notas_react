@@ -1,24 +1,31 @@
 import React from "react"
-import heshImg from "../images/hesh.jpg"
-//Creacion de un componente en react
+import hesh from "../images/hesh.png"
+import "./style/Card.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 class Card extends React.Component{
 
     render() {
+        const {titulo, infomercial} = this.props
         return (
-            <div>
-                <div>
-                    <img src={heshImg} />
-                </div>
-                <div>
-                    <h1>Guias tecnicas</h1>
-                    <p>Aprende una asombrosas tecnicas de ejercicio en la calle</p>
+
+            <div className="card mx-auto Fitness-Card">
+                <div className="card-body">
+                    <div className="row center">
+                        <div className="col-6">
+                            <img src={hesh} alt="" width="100px" className="img-fluid"/>
+                        </div>
+                        <div className="col-6 Fitness-Card-info text-white">
+                            <h1>{titulo}</h1>
+                            <p>{infomercial}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        )
 
+        )
     }
 
 }
 
-export default Card //importante al exportar un componente
+export default Card
