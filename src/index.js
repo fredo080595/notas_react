@@ -5,9 +5,9 @@
 
 import React from "react"
 import ReactDom from "react-dom"
-import Card from "./components/Card";
+import App from "./components/App.js"
 
 const container = document.getElementById('root')
 
-ReactDom.render(<Card  titulo = 'Hesh' infomercial = 'Como Olvidar que estos son los mejores audifonos' />,container)
+ReactDom.render(<App/>,container)
 
